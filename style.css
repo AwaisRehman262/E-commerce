@@ -1,0 +1,172 @@
+nav {
+    background-color: #679289;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav a {
+    color: #F4C095;
+    margin: 0% 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 6px;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    background-color: white;
+}
+
+.feature-card {
+    padding: 12px;
+    width: 300px;
+    border: 2px solid #F4C095;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+    margin: 6px;
+}
+
+.feature-product h2 {
+
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+
+
+}
+
+.feature-card h3 {
+    color: #679289;
+}
+
+.feature-card button {
+    outline: none;
+    border: none;
+    background-color: #679289;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* 
+    .feature-card button:hover{
+    transform:translateY(-8px);
+} 
+*/
+
+.feature-card p {
+    text-align: justify;
+
+}
+
+.feature-card:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.feature-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.ourproducts{
+    margin:6px;
+    text-align: center;
+}
+
+.ourproducts h2{
+    color: #000000;
+}
+
+.our-products-wrapper{
+    display: flex;
+}
+.our-product-card{
+    margin: 12px;
+    padding: 12px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid#679289;
+    transition: all 0.5s;
+}
+
+.our-product-card p{
+    text-align: justify;
+}
+
+.our-product-card h3{
+    color:#679289;
+}
+
+.our-product-card button{
+    outline: none;
+    border: none;
+    background-color: #679289;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.our-product-card:hover{
+    background-color: #d8d8d8;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.top-to-bottom {
+    background-color: #679289;
+    color: white;
+    font-weight: bold;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    padding: 1em;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.top-to-bottom:active {
+    transform: scale(1.1);
+}
+footer{
+    height:100px;
+    background-color: grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+footer .content{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.copywright{
+    background-color: black;
+    color:whitesmoke;
+    width:100%;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .feature-card-wrapper {
+        justify-content: center;
+
+    }
+}
