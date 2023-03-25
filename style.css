@@ -20,6 +20,8 @@ nav a {
 
 nav a:hover {
     background-color: white;
+    color: #000000;
+    transform: scale(1.2);
 }
 
 .feature-card {
@@ -35,16 +37,18 @@ nav a:hover {
 }
 
 .feature-product h2 {
-
     width: 100%;
     text-align: center;
     margin-top: 2em;
-
-
 }
 
 .feature-card h3 {
     color: #679289;
+}
+
+.feature-card p {
+    text-align: justify;
+
 }
 
 .feature-card button {
@@ -54,6 +58,7 @@ nav a:hover {
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 /* 
@@ -62,9 +67,9 @@ nav a:hover {
 } 
 */
 
-.feature-card p {
-    text-align: justify;
-
+.feature-card button:hover{
+    background-color: black;
+    transform: scale(1.1);
 }
 
 .feature-card:hover {
@@ -81,6 +86,10 @@ nav a:hover {
     width: 100%;
 }
 
+.feature-card-wrapper div img{
+    width: 200px;
+}
+
 .ourproducts{
     margin:6px;
     text-align: center;
@@ -92,6 +101,10 @@ nav a:hover {
 
 .our-products-wrapper{
     display: flex;
+}
+
+.our-products-wrapper div img{
+    width: 200px;
 }
 .our-product-card{
     margin: 12px;
@@ -117,6 +130,12 @@ nav a:hover {
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.our-product-card button:hover{
+    background-color: black;
+    transform: scale(1.1);
 }
 
 .our-product-card:hover{
