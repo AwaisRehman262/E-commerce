@@ -28,8 +28,8 @@ nav a:hover {
 .feature-card {
     margin: 12px;
     padding: 12px;
-    width: 375px;
-    height: 375px;
+    width: 350px;
+    height: 395px;
     border: 2px solid #F4C095;
     border-radius: 5px;
     display: flex;
