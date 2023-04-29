@@ -1,13 +1,10 @@
 body {
+    width: 100%;
     align-items: center;
-    position:relative;
-    top:20px;
 }
 
 #home{
     width: 100%;
-    position: absolute;
-    top:0px;
 }
 
 nav {
@@ -103,7 +100,6 @@ a{
 }
 
 a:hover {
-    text-decoration: underline;
 }
 
 .new-account {

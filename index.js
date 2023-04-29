@@ -35,5 +35,5 @@ function readMore(index) {
 }
 
 function gotoCart() {
-    location.href = "login.html";
+    location.href = "login.html"
 }
