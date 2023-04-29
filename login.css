@@ -1,11 +1,13 @@
 body {
     align-items: center;
+    position:relative;
+    top:20px;
 }
 
 #home{
     width: 100%;
     position: absolute;
-    top:1px;
+    top:0px;
 }
 
 nav {
@@ -52,7 +54,7 @@ nav a:hover {
     height: 400px;
     align-items: center;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     gap: 10px;
 }
