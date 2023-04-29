@@ -2,6 +2,7 @@
 // acces cart value
 // add 1 to cart value
 // update cart value
+
 function addToCart() {
     // Getting the element with id cart as a string
     const cart = document.getElementById("cart").innerText
@@ -26,9 +27,13 @@ function readMore(index) {
     if (document.getElementsByClassName("more")[index].style.display == 'none') {
         document.getElementsByClassName("more")[index].style.display = 'inline'
     }
-    else{
+    else {
         document.getElementsByClassName("more")[index].style.display = 'none'
     }
 
 
+}
+
+function gotoCart() {
+    location.href = "login.html";
 }
