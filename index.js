@@ -4,20 +4,31 @@
 // update cart value
 function addToCart() {
     // Getting the element with id cart as a string
-        const cart = document.getElementById("cart").innerText
-    
+    const cart = document.getElementById("cart").innerText
+
     // splitting it to convert it in an array
-        let cartArray = cart.split("")
-    
+    let cartArray = cart.split("")
+
     //Taking last item of cartArray using .pop() and storing it in lastItemCart
-        let lastItemCart = cartArray.pop()
-    
+    let lastItemCart = cartArray.pop()
+
     // declaring variable updatedCart and storing value of cart
-        const updatedCart = Number(lastItemCart) + 1
-    
+    const updatedCart = Number(lastItemCart) + 1
+
     // Taking the remaining array and continating it with updated cart and storing it in the element with id cart
-        document.getElementById("cart").innerText = cartArray.join("")+ updatedCart
-    
+    document.getElementById("cart").innerText = cartArray.join("") + updatedCart
+
     // alerting "article added to cart"
-        alert("Article added to cart")
+    alert("Article added to cart")
+}
+
+function readMore(index) {
+    if (document.getElementsByClassName("more")[index].style.display == 'none') {
+        document.getElementsByClassName("more")[index].style.display = 'inline'
     }
+    else{
+        document.getElementsByClassName("more")[index].style.display = 'none'
+    }
+
+
+}

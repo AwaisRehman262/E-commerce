@@ -186,6 +186,10 @@ footer .content{
     text-align: center;
 }
 
+.more{
+    display:none;
+}
+
 @media screen and (max-width:768px) {
     .feature-card-wrapper {
         justify-content: center;
