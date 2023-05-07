@@ -163,6 +163,7 @@ nav a:hover {
 .top-to-bottom:active {
     transform: scale(1.1);
 }
+
 footer{
     height:100px;
     background-color: grey;
