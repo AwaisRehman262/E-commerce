@@ -93,6 +93,7 @@ nav a:hover {
 }
 
 .ourproducts{
+    /* display: flex; */
     margin:6px;
     text-align: center;
 }
