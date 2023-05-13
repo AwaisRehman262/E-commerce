@@ -1,9 +1,9 @@
-.body{
-    align-items:center;
-}
-
 #home{
     width: 100%;
+}
+
+.body{
+    align-items:center;
 }
 
 .body h2{
@@ -11,69 +11,103 @@
     color: #668844;
 }
 
-.cart{
+.login-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 50%;
+    left: 20%;
+    width: 600px;
+    height: 600px;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    gap: 10px;
+}
+
+.login-page:hover{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.login {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+}
+
+input {
+    width: 85%;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding-left: 15px;
+    font-weight: 650;
+    color: rgba(0, 0, 0, 0.5);
+    outline-style: none;
+
+}
+
+.login-btn {
+    width: 80%;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #679289;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* .cart{
     display: flex;
     border: 4px solid black;
     border-radius: 5px;
     height:max-content;
     margin: 1px;
     padding: 1px;
-}
+} */
 
-.cart-product{
-    width: 80%;
-    /* border: 3px solid red; */
-    /* min-height: 1vh; */
-}
-
-.cart-item{
-    height: 40px;
-    display:flex;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    margin: 1px;
-}
-.cart-item p.one{
-    font-size:x-large;
-    font-weight: 600;
-}
-
-.cart-item img{
-    height: auto;
-}
-
-.cart-quantity{
-    width: 10%;
-    /* min-height: 1vh; */
-    margin: 1px;
-    /* border: 3px solid red; */
-}
-
-.cart-item-quantity{
+.cart-wrapper{
     border: 3px solid black;
     border-radius: 5px;
     height: 40px;
     width: 100%;
     margin: 1px;
+    display: flex;
 }
 
-.cart-item-quantity p{
+.cart-body{
+    height: auto;
+    width: 100%;
+    display:flex;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.cart-body img{
+    height: auto;
+}
+
+
+.cart-quantity{
+    width: 10%;
+    min-height: 1vh;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.cart-quantity p{
     text-align: center;
 }
 
 .cart-price{
     width: 10%;
     margin: 1px;
-    /* border: 3px solid red; */
-    /* min-height: 1vh; */
-}
-
-.cart-item-price{
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 5px;
-    height: 40px;
-    width: 100%;
-    margin: 1px;
 }
 
 .bton{
@@ -84,4 +118,13 @@
 .bton button{
     border-radius: 5px;
     box-shadow: -4px 3px 3px black;
+}
+
+@keyframes loginToptoDown {
+    from {
+        top:-200px;
+    }
+    to {
+        top:10px;
+    }
 }
