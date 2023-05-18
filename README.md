@@ -5,8 +5,8 @@
 
 Here are some ideas to get you started:
 
-- This is the readme file of my first e-commerce website.
-- In this file i will write every feature that i will create in this website
+### - This is the readme file of my first e-commerce website.
+### - In this file i will write every feature that i will create in this website
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
