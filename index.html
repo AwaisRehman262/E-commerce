@@ -9,7 +9,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="/Assets/logo.png" />
     <title>E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -20,9 +20,9 @@
             <a href="#home">Home</a>
             <a href="#Featuredproduct">Featured Product</a>
             <a href="#ourproducts">Our Products</a>
-            <a href="#quickline">Quick Links</a>
+            <a href="#" onclick="loginAnchor()">Login</a>
 
-            <span  style="align-self: right;">
+            <span style="align-self: right;">
                 <a href="cart.html" id="cart">Cart: 0</a>
             </span>
         </nav>
@@ -62,7 +62,16 @@
         </button>
 
     </div>
-
+    <!-- login page -->
+    <div id="login-page">
+        <span class="login" id="login">Login</span>
+        <input type="email" name="email" id="inputMail" class="input" required placeholder="Enter your email address."
+            onblur="checkRequired()">
+        <input type="password" name="password" id="inputPass" class="input" required placeholder="Enter your password."
+            onblur="checkRequired()">
+        <p style="display: none; color: red;">Please fill all the required fields.</p>
+        <button type="submit" class="login-btn" onclick="saveLogintolocal()">Login to e-commerce</button>
+    </div>
     <!-- Featured products -->
 
     <div class="feature-product" id="Featuredproduct">
@@ -76,8 +85,10 @@
 
     <!-- Our Products -->
     <div class="ourproducts" id="ourproducts">
+
         <h2>Our Products</h2>
         <div class="our-products-wrapper" id="our_product_wrapper">
+        </div>
     </div>
 
     <!-- Top to bottom button -->

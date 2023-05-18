@@ -1,12 +1,11 @@
-let products =
-    [
-        { id: 0, name: "Cube 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube1.jpeg", is_featured: true },
-        { id: 1, name: "Cube 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube2.jpeg", is_featured: true },
-        { id: 2, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube3.jpeg", is_featured: true },
-        { id: 3, name: "Cube 4", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera1.jpeg", is_featured: false },
-        { id: 4, name: "Cube 5", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera2.jpeg", is_featured: false },
-        { id: 5, name: "Cube 6", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera3.jpeg", is_featured: false },
-    ]
+let products = [
+    { id: 0, name: "Cube 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube1.jpeg", is_featured: true },
+    { id: 1, name: "Cube 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube2.jpeg", is_featured: true },
+    { id: 2, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\cube3.jpeg", is_featured: true },
+    { id: 3, name: "Camera 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera1.jpeg", is_featured: false },
+    { id: 4, name: "Camera 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera2.jpeg", is_featured: false },
+    { id: 5, name: "Camera 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera3.jpeg", is_featured: false },
+]
 
 for (let product of products) {
     if (product.is_featured == true) {
@@ -14,8 +13,8 @@ for (let product of products) {
         let mainDiv = document.getElementById('feature_card_wrapper')
 
         let card = document.createElement('DIV')
-        mainDiv.appendChild(card)
         card.className = 'feature-card'
+        mainDiv.appendChild(card)
 
         let heading = document.createElement('H3')
         card.appendChild(heading)
@@ -38,6 +37,7 @@ for (let product of products) {
         add_to_cart_button.addEventListener('click', addToCart)
         add_to_cart_button.id = product.id
         card.appendChild(add_to_cart_button)
+
     } else {
         let ourProductsDiv = document.getElementById('our_product_wrapper')
 
@@ -78,6 +78,9 @@ for (let product of products) {
     }
 }
 
+let isCartEmpty = localStorage.getItem('cartValue') == null
+document.getElementById("cart").innerText = isCartEmpty ? 'Cart:0' : localStorage.getItem('cartValue')
+
 function addToCart() {
     //                                       changing value of cart in navbar
     // Access cart element
@@ -85,8 +88,9 @@ function addToCart() {
     // add 1 to cart value
     // update cart value
 
+
     // Getting the element with id cart as a string
-    const cart = document.getElementById("cart").innerText
+    cart = document.getElementById("cart").innerText
 
     // splitting it to convert it in an array
     let cartArray = cart.split("")
@@ -101,22 +105,17 @@ function addToCart() {
     let updatedCart = cartArray.join("") + updatedCartvalue
 
     document.getElementById("cart").innerText = updatedCart
+    localStorage.setItem('cartValue', updatedCart)
+
+
+
     //                                 giving value of product to local storage
 
-    // // getting the product id
-    // let productId = Number(this.id)
-
-    // for (let i = 0; i <= Object.values(localStorage.getItem(cart));i++) {
-    //     //tsting
-    //     // localStorage.setItem('cart', JSON.stringify(products[this.id]))
-    // }
-
-    // // Get the existing data
     var existing = localStorage.getItem('cart');
 
     // // If no existing data, use the value by itself
     // // Otherwise, add the new value to it
-    var data = existing ? existing +","+ JSON.stringify(products[this.id]) : JSON.stringify(products[this.id]);
+    var data = (existing) ? existing + ',' + JSON.stringify(this.id) : JSON.stringify(this.id);
 
     // // Save back to localStorage
     localStorage.setItem('cart', data);
@@ -147,4 +146,30 @@ function readMore() {
 
 function gotoCart() {
     location.href = "login.html"
+}
+
+function loginAnchor() {
+    let loginDiv = document.getElementById('login-page')
+    loginDiv.style.display = 'flex'
+}
+
+function saveLogintolocal() {
+    let fields = document.getElementById('login-page').getElementsByClassName('input')
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].value !== '') {
+            localStorage.setItem("isLoggedin", true)
+            let loginDiv = document.getElementById('login-page')
+            loginDiv.style.display = 'none'
+        }
+    }
+}
+
+function checkRequired() {
+    let fields = document.getElementById('login-page').getElementsByClassName('input')
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].value == '') {
+            let alertBlock = document.getElementById('login-page').getElementsByTagName('p')
+            alertBlock[0].style.display = 'flex'
+        }
+    }
 }

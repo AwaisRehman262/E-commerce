@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart Quantity Buttons</title>
+  <style>
+    .quantity-container {
+      display: flex;
+      align-items: center;
+      width: 15px;
+      height: 15px;
+    }
+
+    .quantity-button {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="quantity-container">
+    <div class="quantity-button" id="decrement">-</div>
+    <input type="number" id="quantity" value="1" min="1" max="10">
+    <div class="quantity-button" id="increment">+</div>
+  </div>
+
+  <script>
+    const decrementButton = document.getElementById("decrement");
+    const incrementButton = document.getElementById("increment");
+    const quantityInput = document.getElementById("quantity");
+
+    decrementButton.addEventListener("click", () => {
+      const currentValue = parseInt(quantityInput.value);
+      if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+      }
+    });
+
+    incrementButton.addEventListener("click", () => {
+      const currentValue = parseInt(quantityInput.value);
+      if (currentValue < 10) {
+        quantityInput.value = currentValue + 1;
+      }
+    });
+  </script>
+</body>
+</html>
