@@ -1,13 +1,14 @@
 ### Hi there 👋
 
-<!--
-**AwaisRehman262/AwaisRehman262** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+<!---**AwaisRehman262/AwaisRehman262** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
+-->
 
 ### - This is the readme file of my first e-commerce website.
 ### - In this file i will write every feature that i will create in this website
-- 👯 I’m looking to collaborate on ...
+<!--- 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
