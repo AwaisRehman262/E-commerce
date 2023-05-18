@@ -13,7 +13,10 @@ Here are some ideas to get you started:
 - Save cart products in local storage.
 - Dynamic cart products on 'cart.html'.
 - Saving login state to local storage.
-- 
+
+### Future ideas
+- Make everything responsive.
+- Make everything have a modern look.
 
 <!--- 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
