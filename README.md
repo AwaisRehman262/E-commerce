@@ -17,6 +17,7 @@ Here are some ideas to get you started:
 ### Future ideas
 - Make everything responsive.
 - Make everything have a modern look.
+- Add to a plus and minus button to cart quantity value.
 
 <!--- 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
