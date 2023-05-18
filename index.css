@@ -77,11 +77,24 @@ input {
     background-color: #999299;
 }
 
+.feature-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+}
+
+.feature-card-wrapper div img{
+    width: 200px;
+}
+
 .feature-card {
     margin: 12px;
     padding: 12px;
-    width: 320px;
-    height: 395px;
+    width: 20%;
+    height: 10%;
     border: 2px solid #F4C095;
     border-radius: 5px;
     display: flex;
@@ -132,18 +145,12 @@ input {
     transform: scale(1.1);
 }
 
-.feature-card-wrapper {
+.our-products-wrapper{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
 }
-
-.feature-card-wrapper div img{
-    width: 200px;
-}
-
 .ourproducts{
     margin:6px;
     text-align: center;
@@ -151,10 +158,6 @@ input {
 
 .ourproducts h2{
     color: #000000;
-}
-
-.our-products-wrapper{
-    display: flex;
 }
 
 .our-products-wrapper div img{
