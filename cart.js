@@ -1,26 +1,26 @@
 let products = [
-    { id: 0, name: "Cube 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube1.jpeg", is_featured: true },
-    { id: 1, name: "Cube 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube2.jpeg", is_featured: true },
-    { id: 2, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube3.jpeg", is_featured: true },
-    { id: 3, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube4.jpg", is_featured: true },
-    { id: 4, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube5.jpg", is_featured: true },
-    { id: 5, name: "Camera 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera1.jpeg", is_featured: false },
-    { id: 6, name: "Camera 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera2.jpeg", is_featured: false },
-    { id: 7, name: "Camera 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera3.jpeg", is_featured: false },
+    { id: 0, name: "Cube 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube1.jpeg",price: 20, is_featured: true },
+    { id: 1, name: "Cube 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube2.jpeg",price: 20, is_featured: true },
+    { id: 2, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube3.jpeg",price: 20, is_featured: true },
+    { id: 3, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube4.jpg",price: 20, is_featured: true },
+    { id: 4, name: "Cube 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", image: "Assets\\Products\\Cube\\cube5.jpg",price: 20, is_featured: true },
+    { id: 5, name: "Camera 1", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera1.jpeg",price: 20, is_featured: false },
+    { id: 6, name: "Camera 2", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera2.jpeg",price: 20, is_featured: false },
+    { id: 7, name: "Camera 3", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur porro provident deserunt error ut magnam nam ad molestias quam quod, aliquam ducimus nobis velit, quasi, facere sint rerum omnis. Corrupti quam, amet ", hidden_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia repellendus nihil.", image: "Assets\\camera3.jpeg",price: 20, is_featured: false },
 ]
 
 
 
 //taking index
 let cart = localStorage.getItem('cart')
-// console.log(cart)
+// console.log(cartBodyWrapper)
 let cartArray = cart.split(",")
 
 for (i = 0; i < cartArray.length; i++) {
 
-    var cartIndex = cartArray[i][1]
+    let cartIndex = cartArray[i][1]
 
-    
+
     // creating cart wrapper div
     let cartWrapper = document.createElement('DiV')
 
@@ -185,7 +185,7 @@ for (i = 0; i < cartArray.length; i++) {
 
 
     // appending cartwrapper to document
-    let cartDiv = document.getElementById('cart')
+    let cartDiv = document.getElementById('cart-body-wrapper')
 
     cartDiv.appendChild(cartWrapper)
 
@@ -203,12 +203,14 @@ document.getElementById('total-price').innerText = "$" + totalWithout$
 let isCartEmpty = localStorage.getItem('cartValue') == null
 document.getElementById("cart-value").innerText = isCartEmpty ? 'Cart:0' : localStorage.getItem('cartValue')
 
-function goToCart() {
-    console.log('gotocart working')
-    if (localStorage.getItem('isLoggedin') == false) {
+function checkout() {
+    localStorage.removeItem('cart')
+    localStorage.removeItem('cartValue')
+    // if cart is empty
+    if (localStorage.getItem('isLoggedin') == false || localStorage.getItem('isLoggedin') == null) {
         let loginDiv = document.getElementById('login-page')
         loginDiv.style.display = 'flex'
-    } else { 
+    } else {
         window.location = 'index.html'
     }
 }
